@@ -1,0 +1,171 @@
+html{
+  overflow-x: hidden;
+}
+
+html *{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+
+#main{
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  background-color: #F5F5DC;
+}
+
+#main>*{
+  width: 50%;
+}
+
+#main>div:first-of-type{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1{
+  margin-top: 30px;
+  margin-bottom: 14px;
+  font-size: 3rem;
+}
+
+#img-div{
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  align-items: center;
+  margin-bottom: 45px;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+#img-div:hover{
+   box-shadow: 2px 10px 50px rgba(0, 0, 0, 0.5);
+}
+
+#image{
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+#tribute-info h2{
+  text-align: center;
+}
+
+ul{
+  width: 60%;
+  margin: 20px auto;
+}
+
+li{
+  padding:10px;
+  margin: 10px auto;
+  list-style: none;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+  transition: background-color 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+}
+
+li:hover{
+  background-color: white;
+  box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+ul span{
+  font-weight: 800;
+}
+
+#quote{
+  width: 50%;
+  margin: auto;
+}
+
+q{
+ font-family: monospace;
+  font-size: 1.1rem;
+  display: block;
+}
+
+cite{
+  margin-top: 5px;
+  float: right;
+}
+
+#main>div:last-of-type{
+  margin-top: 25px;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+}
+
+a{
+  text-decoration: none;
+  color: blue;
+  transition: color 0.2s ease-in;
+}
+
+a:hover{
+  color: gray;
+}
+
+footer{
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  font-style: italic;
+  position: relative;
+  
+}
+
+footer p{
+  animation-name: whitening;
+  animation-duration: 5s;
+  animation-delay: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.loader{
+  position: absolute;
+  height: 100%;
+  width: 250%;
+  background: linear-gradient(90deg, #F5F5DC 0%, #7D72FF 30%, #7D72FF 70%, #F5F5DC 100%);
+  z-index: -1;
+  left: -250%;
+  animation-name: passing;
+  animation-duration: 5s;
+  animation-delay: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+} 
+@keyframes passing{
+  0%{
+    left: -250%;
+  }
+    50%{
+      left: 50%;
+    }  
+    100%{
+      left: 350%;
+    }
+}
+
+@keyframes whitening{
+  40%{
+    color:white;
+  }
+  60%{
+    color:black;
+  }
+}
